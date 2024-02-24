@@ -34,7 +34,7 @@ function App() {
   const pickWordAndCategory = () => {
     // pick a random category
     const categories = Object.keys(words);
-    const category = categories[Math.floor(Math.random() * Object.keys(categories).length)];
+    const category = categories[Math.floor(Math.random() * Object.keys(categories.length))];
 
     // pick a randeom word
     const word = words[category][Math.floor(Math.random() * words[category].length)];
@@ -49,7 +49,7 @@ function App() {
 
     // create array of latters
     let wordLetters = word.split("");
-    
+
     wordLetters = wordLetters.map((I) => I.toLowerCase());
 
 
@@ -65,8 +65,8 @@ function App() {
   };
 
   // process the letter imput
-  const verifyLetter = () => {
-    setGameStage(stages[2].name);
+  const verifyLetter = (letter) => {
+    console.log(letter);
   };
 
   // restarts the game
@@ -79,16 +79,15 @@ function App() {
       <div className="app">
         {gameStage === "start" && <StartScreen startGame={startGame} />}
         {gameStage === "game" && <Game
-          verifyLetter={verifyLetter} 
-          pickdWord={pickdWord}
+          verifyLetter={verifyLetter}
+          pickedWord={pickedWord}
           pickedCategory={pickedCategory}
-          letters={letters} 
-          guessedLetters={guessedLetters} 
-          wrongLetters={wrongLetters} 
-          guesses={guesses} 
+          letters={letters}
+          guessedLetters={guessedLetters}
+          wrongLetters={wrongLetters}
+          guesses={guesses}
           score={score} />}
         {gameStage === "end" && <GameOver retry={retry} />}
-
       </div>
     </>
   );
