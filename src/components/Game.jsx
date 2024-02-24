@@ -1,21 +1,15 @@
 import { useState, useRef } from "react";
 import "./Game.css";
 
-const Game = ({
-  verifyLetter,
-  pickedWord,
-  pickedCategory,
-  letters,
-  guessedLetters,
-  wrongLetters,
-  guesses,
-  score,
-}) => {
+const Game = ({verifyLetter, pickedWord, pickedCategory, letters, guessedLetters, wrongLetters, guesses, score,}) => {
+  
+  console.log("Props recebidas:", pickedWord, pickedCategory, letters, guessedLetters, wrongLetters, guesses, score);
+
   const [letter, setLetter] = useState("");
   const letterInputRef = useRef(null);
 
   const handleSubmit = (e) => {
-    e.preventDesault();
+    e.preventDefault();
 
     verifyLetter(letter);
 
