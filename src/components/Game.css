@@ -13,19 +13,19 @@
 .wordContainer {
     margin: 1.5em;
     padding: 1.5em;
-    border: 20px solid #c66e8d;
+    border: 20px solid #ab0ce989;
     display: flex;
 }
 
 .letter, .blankSquare {
     font-size: 70px;
     line-height: 1.5;
-    border: 3px solid #000;
+    border: 3px solid #24da1b;
     height: 100px;
     width: 100px;
     text-transform: uppercase;
-    background-color: #fff;
-    color: #000;
+    background-color: #ffffff;
+    color: #8d06f4;
     font-weight: bold;
 }
 

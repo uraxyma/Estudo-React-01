@@ -1,10 +1,7 @@
 import { useState, useRef } from "react";
 import "./Game.css";
 
-const Game = ({verifyLetter, pickedWord, pickedCategory, letters, guessedLetters, wrongLetters, guesses, score,}) => {
-  
-  console.log("Props recebidas:", pickedWord, pickedCategory, letters, guessedLetters, wrongLetters, guesses, score);
-
+const Game = ({ verifyLetter, pickedWord, pickedCategory, letters, guessedLetters, wrongLetters, guesses, score, }) => {
   const [letter, setLetter] = useState("");
   const letterInputRef = useRef(null);
 
@@ -25,7 +22,7 @@ const Game = ({verifyLetter, pickedWord, pickedCategory, letters, guessedLetters
       </p>
       <h1>Adivinhe a Palavra:</h1>
       <h3 className="tip">
-        Dica sobre a plavra: <span>{pickedCategory}</span>
+        Dica sobre da plavra: <span>{pickedCategory}</span>
       </h3>
       <p>Você ainda tem {guesses} tentativa(s).</p>
       <div className="wordContainer">
@@ -55,7 +52,7 @@ const Game = ({verifyLetter, pickedWord, pickedCategory, letters, guessedLetters
         </form>
       </div>
       <div className="wrongLettersContainer">
-        <p>Letras Já Utilizadas:</p>
+        <p>Letras Já Erradas:</p>
         {wrongLetters.map((letter, i) => (
           <span key={i}>{letter}, </span>
         ))}
