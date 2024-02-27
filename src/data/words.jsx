@@ -5,4 +5,7 @@ export const wordsList = {
     computador: ["Mouse", "Teclado", "Monitor", "Gabinete"],
     programação: ["Linguagem", "Framework", "JavaScript", "React"],
     alimento: ["Arroz", "Feijão", "Carne", "Leite", "Ovo"],
+    cidades: ["Paris", "Tóquio", "Londres", "Sydney"],
+    cores: ["Vermelho", "Azul", "Laranja", "Verde", "Roxo"],
+    profissões: ["Médico", "Professor", "Engenheiros", "Policial", "Bombeiro"],
   };
